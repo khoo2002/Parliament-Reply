@@ -1,0 +1,1121 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: advanced-chat
+  name: ILSED OS
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/ollama:0.0.6@f430f3eb959f4863b1e87171544a8fec179441b90deda5693c85f07712d2a68c
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/gemini:0.5.4@22fa3d100c55f8fc4b2837d8fb0831e3c8de333a5a5b028e073d502d2df9cb35
+kind: app
+version: 0.4.0
+workflow:
+  conversation_variables: []
+  environment_variables:
+  - description: ''
+    id: 35d509f0-2f34-40df-b00d-e75c4e497cd6
+    name: fail
+    selector:
+    - env
+    - fail
+    value: fail
+    value_type: string
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1757327612721-source-1757327261801-target
+      source: '1757327612721'
+      sourceHandle: source
+      target: '1757327261801'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1757327625505-source-1757327265153-target
+      source: '1757327625505'
+      sourceHandle: source
+      target: '1757327265153'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1757327633079-source-1757327267597-target
+      source: '1757327633079'
+      sourceHandle: source
+      target: '1757327267597'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 1757327261801-source-1757392156511-target
+      source: '1757327261801'
+      sourceHandle: source
+      target: '1757392156511'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 1757327265153-source-1757392160268-target
+      source: '1757327265153'
+      sourceHandle: source
+      target: '1757392160268'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 1757327267597-source-1757392163105-target
+      source: '1757327267597'
+      sourceHandle: source
+      target: '1757392163105'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: if-else
+      id: 1757326983680-source-1757327056799-target
+      source: '1757326983680'
+      sourceHandle: source
+      target: '1757327056799'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: knowledge-retrieval
+      id: 1757327056799-true-1757391666517-target
+      source: '1757327056799'
+      sourceHandle: 'true'
+      target: '1757391666517'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1757391666517-source-1757391672795-target
+      source: '1757391666517'
+      sourceHandle: source
+      target: '1757391672795'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 1757391672795-source-1757327612721-target
+      source: '1757391672795'
+      sourceHandle: source
+      target: '1757327612721'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 17592082813370-source-1757327625505-target
+      source: '17592082813370'
+      sourceHandle: source
+      target: '1757327625505'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 17592082907950-source-1757327633079-target
+      source: '17592082907950'
+      sourceHandle: source
+      target: '1757327633079'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 17592082956490-source-1757392169962-target
+      source: '17592082956490'
+      sourceHandle: source
+      target: '1757392169962'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 17592082652170-source-17592082813370-target
+      source: '17592082652170'
+      sourceHandle: source
+      target: '17592082813370'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 17592082722020-source-17592082907950-target
+      source: '17592082722020'
+      sourceHandle: source
+      target: '17592082907950'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 17592083007120-source-17592082956490-target
+      source: '17592083007120'
+      sourceHandle: source
+      target: '17592082956490'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: knowledge-retrieval
+      id: 1757327056799-9073bee8-193d-4ccc-9439-8ae96ecc06a1-17592082652170-target
+      source: '1757327056799'
+      sourceHandle: 9073bee8-193d-4ccc-9439-8ae96ecc06a1
+      target: '17592082652170'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: knowledge-retrieval
+      id: 1757327056799-677e41ad-647d-4b6f-9b38-06105bda47a3-17592082722020-target
+      source: '1757327056799'
+      sourceHandle: 677e41ad-647d-4b6f-9b38-06105bda47a3
+      target: '17592082722020'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: knowledge-retrieval
+      id: 1757327056799-ce43a3f0-7d80-4736-bef3-06eb1839f22e-17592083007120-target
+      source: '1757327056799'
+      sourceHandle: ce43a3f0-7d80-4736-bef3-06eb1839f22e
+      target: '17592083007120'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: Start
+        type: start
+        variables:
+        - label: Style
+          max_length: 48
+          options:
+          - Parliament
+          - Media
+          - Other
+          - Short_Answer
+          required: true
+          type: select
+          variable: Style
+      height: 89
+      id: '1757326983680'
+      position:
+        x: 30
+        y: 785
+      positionAbsolute:
+        x: 30
+        y: 785
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: bb6c43f4-556f-415d-ba28-b24966f9d707
+            value: Parliament
+            varType: string
+            variable_selector:
+            - '1757326983680'
+            - Style
+          id: 'true'
+          logical_operator: and
+        - case_id: 9073bee8-193d-4ccc-9439-8ae96ecc06a1
+          conditions:
+          - comparison_operator: is
+            id: 34f0c748-e880-462e-a20a-ec51670e199e
+            value: Media
+            varType: string
+            variable_selector:
+            - '1757326983680'
+            - Style
+          id: 9073bee8-193d-4ccc-9439-8ae96ecc06a1
+          logical_operator: and
+        - case_id: 677e41ad-647d-4b6f-9b38-06105bda47a3
+          conditions:
+          - comparison_operator: is
+            id: f7f32789-5197-4970-9e53-96a0be3891bd
+            value: Other
+            varType: string
+            variable_selector:
+            - '1757326983680'
+            - Style
+          id: 677e41ad-647d-4b6f-9b38-06105bda47a3
+          logical_operator: and
+        - case_id: ce43a3f0-7d80-4736-bef3-06eb1839f22e
+          conditions:
+          - comparison_operator: contains
+            id: 601e207a-9dad-4620-ba78-884a73d45a93
+            value: Short_Answer
+            varType: string
+            variable_selector:
+            - '1757326983680'
+            - Style
+          id: ce43a3f0-7d80-4736-bef3-06eb1839f22e
+          logical_operator: and
+        desc: ''
+        selected: false
+        title: IF/ELSE
+        type: if-else
+      height: 269
+      id: '1757327056799'
+      position:
+        x: 607.3261101463863
+        y: 776.1625135383706
+      positionAbsolute:
+        x: 607.3261101463863
+        y: 776.1625135383706
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1757327612721'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: gemini-2.5-flash
+          provider: langgenius/gemini/google
+        prompt_template:
+        - edition_type: basic
+          id: 8ba112c4-975a-4168-8d0f-c99af56dd89f
+          role: system
+          text: "You are representing Suruhanjaya Komunikasi dan Multimedia Malaysia\
+            \ (MCMC).\n\nYou are tasked to rewrite the retrieved knowledge into a\
+            \ formal Parliamentary reply style.\n\nWhen responding to the user:\n\
+            \ - Acknowledge the question in a respectful and formal manner.\n - Use\
+            \ Malaysian Malay (not Indonesian).\n - In the opening, preferably begin\
+            \ with MCMC as the subject, highlighting a proactive or past action (e.g.,\
+            \ “Suruhanjaya Komunikasi dan Multimedia Malaysia (MCMC) mengambil tindakan\
+            \ proaktif…”). If not suitable, you may instead start with data or context\
+            \ — but give preference to MCMC-first phrasing where natural.\n - After\
+            \ presenting data, provide explanations, policies, actions, or measures\
+            \ taken by the Government, maintaining factual accuracy.\n - The reply\
+            \ must be structured, official, and formal in tone, suitable for Parliamentary\
+            \ proceedings.\n - The reply should clearly indicate the date up to which\
+            \ the data is valid (e.g., “as of [date]”).\n - Conclude with a formal\
+            \ closing statement, reaffirming the Government’s commitment or position.\n\
+            \ - Avoid over-explanation. If information is unavailable, state that\
+            \ it is not available. If clarification is needed, formally request it.\n\
+            \ - Responses must remain in the same language as the user’s question.\n\
+            \ - After the formal closing, preferably present supporting data, figures,\
+            \ or tabulated information if have and appropriate, then put under a clearly\
+            \ marked section titled “Maklumat Tambahan”.\n - Always state the validity\
+            \ date of the data (e.g. “Sehingga [tarikh]”).\n - Use tables or bullet\
+            \ points where appropriate for clarity.\n\nStyle Examples:\n{{#context#}}\n\
+            \nFacts:\n{{#1757391672795.text#}}"
+        - id: f40cd6b9-cc2a-4fb6-9e43-475226af3864
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: PAR R LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1757327261801'
+      position:
+        x: 2091
+        y: 252
+      positionAbsolute:
+        x: 2091
+        y: 252
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1757327625505'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: gemini-2.5-flash
+          provider: langgenius/gemini/google
+        prompt_template:
+        - edition_type: basic
+          id: 78c1af66-7a32-4099-8c65-bd1042632782
+          role: system
+          text: "Rewrite the retrieved knowledge into a media/press article style.\
+            \ \nUse persuasive, concise, and public-friendly language. \nFocus on\
+            \ clarity and storytelling while keeping facts correct.\n\nStyle Examples:\n\
+            {{#context#}}\n\nFacts:\n{{#17592082813370.text#}}"
+        - id: 86d6cac4-4e54-4e42-9a5a-168b2c5b4b7b
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: Media R LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1757327265153'
+      position:
+        x: 2425
+        y: 396
+      positionAbsolute:
+        x: 2425
+        y: 396
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: gemini-2.5-flash
+          provider: langgenius/gemini/google
+        prompt_template:
+        - edition_type: basic
+          id: dfe56c8e-af57-499a-bfd5-5a23ae4da7b6
+          role: system
+          text: "Rewrite the retrieved knowledge into a general explanatory style.\
+            \ \nUse clear, neutral, and accessible language. \nFocus on explaining\
+            \ the issue in a way that is easy to understand.\n\nStyle Examples:\n\
+            {{#context#}}\n\nFacts:\n{{#17592082907950.text#}}"
+        - id: eef103fb-6886-4b73-a1ba-9bb7610f8d6d
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: Other R LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1757327267597'
+      position:
+        x: 2759
+        y: 533
+      positionAbsolute:
+        x: 2759
+        y: 533
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - otvLwTzB3y7eQ/0j8GAUwJbiR5AW4mT/8+vTlFKvm+zNJiD4BAX8DUQowkDDqdO1
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0.3
+            vector_setting:
+              embedding_model_name: mxbai-embed-large:latest
+              embedding_provider_name: langgenius/ollama/ollama
+              vector_weight: 0.7
+        query_variable_selector:
+        - sys
+        - query
+        retrieval_mode: multiple
+        selected: false
+        title: Par R
+        type: knowledge-retrieval
+      height: 91
+      id: '1757327612721'
+      position:
+        x: 1757
+        y: 252
+      positionAbsolute:
+        x: 1757
+        y: 252
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - 3162Elm/2aPc7kRvlYZV/uS/RF31Rl4gP2Kv4yS8rzqNsC0sdl52qel6lXxamCWb
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0.3
+            vector_setting:
+              embedding_model_name: mxbai-embed-large:latest
+              embedding_provider_name: langgenius/ollama/ollama
+              vector_weight: 0.7
+        query_variable_selector:
+        - sys
+        - query
+        retrieval_mode: multiple
+        selected: false
+        title: MEDia R
+        type: knowledge-retrieval
+      height: 91
+      id: '1757327625505'
+      position:
+        x: 2091
+        y: 407
+      positionAbsolute:
+        x: 2091
+        y: 407
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - yifd0Hg6B0R786ktZyDyKpxr8LHpiMKqxm3kcKYtr2XngX7/m42VjpkCUo2hAbge
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0.3
+            vector_setting:
+              embedding_model_name: mxbai-embed-large:latest
+              embedding_provider_name: langgenius/ollama/ollama
+              vector_weight: 0.7
+        query_variable_selector:
+        - sys
+        - query
+        retrieval_mode: multiple
+        selected: false
+        title: Other R
+        type: knowledge-retrieval
+      height: 91
+      id: '1757327633079'
+      position:
+        x: 2425
+        y: 551
+      positionAbsolute:
+        x: 2425
+        y: 551
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - eF9bV2dw8eRDBOX32TJLl4Srq360oBN4ZChhkR3MTS/Bxbqt4pArAk+2nPf8Lp2h
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0.3
+            vector_setting:
+              embedding_model_name: mxbai-embed-large:latest
+              embedding_provider_name: langgenius/ollama/ollama
+              vector_weight: 0.7
+        query_variable_selector:
+        - sys
+        - query
+        retrieval_mode: multiple
+        selected: false
+        title: FACT DATA
+        type: knowledge-retrieval
+      height: 91
+      id: '1757391666517'
+      position:
+        x: 949.4517945518855
+        y: 727.5563379994086
+      positionAbsolute:
+        x: 949.4517945518855
+        y: 727.5563379994086
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1757391666517'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: gemini-2.5-flash
+          provider: langgenius/gemini/google
+        prompt_template:
+        - id: 8dc12bdd-7735-46a3-9800-c8973d9bd672
+          role: system
+          text: '
+
+            Use the following context as your learned knowledge, inside <context></context>
+            XML tags.
+
+
+            When answer to user:
+
+            - Don''t overthinking.
+
+            - If you don''t know, just say that you don''t know.
+
+            - If you don''t know when you are not sure, ask for clarification.
+
+            - Must not mix the tables and numbers.
+
+            - Return the original tables that are relevant before providing insights.
+
+            - Provide insights separately — do not mix tables and narrative/analysis.
+
+            - The reply should clearly indicate the date up to which the data is valid
+            (e.g., “as of [date]”).
+
+
+            Avoid mentioning that you obtained the information from the context.
+
+            And answer according to the language of the user''s question.
+
+
+            <context>
+
+            {{#context#}}
+
+            </context>
+
+            '
+        - id: 8b7e950d-dc93-42ee-8e4a-3d7c7ccfc08a
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: FACT DATA LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1757391672795'
+      position:
+        x: 1256.832676881776
+        y: 696.3366389152083
+      positionAbsolute:
+        x: 1256.832676881776
+        y: 696.3366389152083
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#1757327261801.text#}}'
+        desc: ''
+        selected: false
+        title: Answer
+        type: answer
+        variables: []
+      height: 103
+      id: '1757392156511'
+      position:
+        x: 2425
+        y: 252
+      positionAbsolute:
+        x: 2425
+        y: 252
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#1757327265153.text#}}'
+        desc: ''
+        selected: false
+        title: Answer 2
+        type: answer
+        variables: []
+      height: 103
+      id: '1757392160268'
+      position:
+        x: 2759
+        y: 389
+      positionAbsolute:
+        x: 2759
+        y: 389
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#1757327267597.text#}}'
+        desc: ''
+        selected: false
+        title: Answer 3
+        type: answer
+        variables: []
+      height: 103
+      id: '1757392163105'
+      position:
+        x: 3093
+        y: 526
+      positionAbsolute:
+        x: 3093
+        y: 526
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#17592082956490.text#}}'
+        desc: ''
+        selected: false
+        title: Answer 5
+        type: answer
+        variables: []
+      height: 103
+      id: '1757392169962'
+      position:
+        x: 1766.908876690787
+        y: 1060.2109703589433
+      positionAbsolute:
+        x: 1766.908876690787
+        y: 1060.2109703589433
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - eF9bV2dw8eRDBOX32TJLl4Srq360oBN4ZChhkR3MTS/Bxbqt4pArAk+2nPf8Lp2h
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0.3
+            vector_setting:
+              embedding_model_name: mxbai-embed-large:latest
+              embedding_provider_name: langgenius/ollama/ollama
+              vector_weight: 0.7
+        query_variable_selector:
+        - sys
+        - query
+        retrieval_mode: multiple
+        selected: false
+        title: FACT DATA (1)
+        type: knowledge-retrieval
+      height: 91
+      id: '17592082652170'
+      position:
+        x: 949.4517945518855
+        y: 854.2876853776041
+      positionAbsolute:
+        x: 949.4517945518855
+        y: 854.2876853776041
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - eF9bV2dw8eRDBOX32TJLl4Srq360oBN4ZChhkR3MTS/Bxbqt4pArAk+2nPf8Lp2h
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0.3
+            vector_setting:
+              embedding_model_name: mxbai-embed-large:latest
+              embedding_provider_name: langgenius/ollama/ollama
+              vector_weight: 0.7
+        query_variable_selector:
+        - sys
+        - query
+        retrieval_mode: multiple
+        selected: false
+        title: FACT DATA (2)
+        type: knowledge-retrieval
+      height: 91
+      id: '17592082722020'
+      position:
+        x: 949.4517945518855
+        y: 958.1281513017502
+      positionAbsolute:
+        x: 949.4517945518855
+        y: 958.1281513017502
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '17592082652170'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: gemini-2.5-flash
+          provider: langgenius/gemini/google
+        prompt_template:
+        - id: 8dc12bdd-7735-46a3-9800-c8973d9bd672
+          role: system
+          text: '
+
+            Use the following context as your learned knowledge, inside <context></context>
+            XML tags.
+
+
+            When answer to user:
+
+            - Don''t overthinking.
+
+            - If you don''t know, just say that you don''t know.
+
+            - If you don''t know when you are not sure, ask for clarification.
+
+            - Must not mix the tables and numbers.
+
+            - Return the original tables that are relevant before providing insights.
+
+            - Provide insights separately — do not mix tables and narrative/analysis.
+
+            - The reply should clearly indicate the date up to which the data is valid
+            (e.g., “as of [date]”).
+
+
+            Avoid mentioning that you obtained the information from the context.
+
+            And answer according to the language of the user''s question.
+
+
+            <context>
+
+            {{#context#}}
+
+            </context>
+
+            '
+        - id: 8b7e950d-dc93-42ee-8e4a-3d7c7ccfc08a
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: FACT DATA LLM (1)
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17592082813370'
+      position:
+        x: 1261.312704215165
+        y: 834.403340838938
+      positionAbsolute:
+        x: 1261.312704215165
+        y: 834.403340838938
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '17592082722020'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: gemini-2.5-flash
+          provider: langgenius/gemini/google
+        prompt_template:
+        - id: 8dc12bdd-7735-46a3-9800-c8973d9bd672
+          role: system
+          text: '
+
+            Use the following context as your learned knowledge, inside <context></context>
+            XML tags.
+
+
+            When answer to user:
+
+            - Don''t overthinking.
+
+            - If you don''t know, just say that you don''t know.
+
+            - If you don''t know when you are not sure, ask for clarification.
+
+            - Must not mix the tables and numbers.
+
+            - Return the original tables that are relevant before providing insights.
+
+            - Provide insights separately — do not mix tables and narrative/analysis.
+
+            - The reply should clearly indicate the date up to which the data is valid
+            (e.g., “as of [date]”).
+
+
+            Avoid mentioning that you obtained the information from the context.
+
+            And answer according to the language of the user''s question.
+
+
+            <context>
+
+            {{#context#}}
+
+            </context>
+
+            '
+        - id: 8b7e950d-dc93-42ee-8e4a-3d7c7ccfc08a
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: FACT DATA LLM (2)
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17592082907950'
+      position:
+        x: 1256.832676881776
+        y: 947.0812932247134
+      positionAbsolute:
+        x: 1256.832676881776
+        y: 947.0812932247134
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '17592083007120'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: gemini-2.5-flash
+          provider: langgenius/gemini/google
+        prompt_template:
+        - id: 8dc12bdd-7735-46a3-9800-c8973d9bd672
+          role: system
+          text: "Use the following context as your learned knowledge, inside <context></context>\
+            \ XML tags.\nWhen answering the user:\nKeep replies short but sufficiently\
+            \ informative.\nDo not overthink or over-explain.\nIf you don’t know,\
+            \ say you don’t know.\nIf you are unsure, ask the user for clarification.\n\
+            Always return original tables first (unaltered), if relevant.\nProvide\
+            \ analysis or insights only after the tables, in a separate section.\n\
+            Do not mix tables with narrative.\nClearly state the date up to which\
+            \ the data is valid (e.g., as of [date]).\nDo not mention the context\
+            \ source.\nAlways respond in the same language as the user’s question.\n\
+            \n<context>\n {{#context#}} \n</context>"
+        - id: 8b7e950d-dc93-42ee-8e4a-3d7c7ccfc08a
+          role: user
+          text: '{{#sys.query#}}'
+        selected: true
+        title: FACT DATA LLM (3)
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17592082956490'
+      position:
+        x: 1267.9408190613872
+        y: 1079.6435901491548
+      positionAbsolute:
+        x: 1267.9408190613872
+        y: 1079.6435901491548
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - eF9bV2dw8eRDBOX32TJLl4Srq360oBN4ZChhkR3MTS/Bxbqt4pArAk+2nPf8Lp2h
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0.3
+            vector_setting:
+              embedding_model_name: mxbai-embed-large:latest
+              embedding_provider_name: langgenius/ollama/ollama
+              vector_weight: 0.7
+        query_variable_selector:
+        - sys
+        - query
+        retrieval_mode: multiple
+        selected: false
+        title: FACT DATA (3)
+        type: knowledge-retrieval
+      height: 91
+      id: '17592083007120'
+      position:
+        x: 949.4517945518855
+        y: 1086.271704995377
+      positionAbsolute:
+        x: 949.4517945518855
+        y: 1086.271704995377
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    viewport:
+      x: -529.2193302164808
+      y: -95.74428845406032
+      zoom: 0.5586457499940404

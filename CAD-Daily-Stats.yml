@@ -1,0 +1,135 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: chat
+  name: CAD-Daily-Stats
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/gemini:0.5.4@22fa3d100c55f8fc4b2837d8fb0831e3c8de333a5a5b028e073d502d2df9cb35
+kind: app
+model_config:
+  agent_mode:
+    enabled: false
+    max_iteration: 10
+    strategy: function_call
+    tools: []
+  annotation_reply:
+    enabled: false
+  chat_prompt_config: {}
+  completion_prompt_config: {}
+  dataset_configs:
+    datasets:
+      datasets:
+      - dataset:
+          enabled: true
+          id: bd840d97-fff9-4658-94bc-7805224a9800
+    reranking_enable: true
+    reranking_mode: weighted_score
+    reranking_model:
+      reranking_model_name: ''
+      reranking_provider_name: ''
+    retrieval_model: multiple
+    top_k: 4
+    weights:
+      keyword_setting:
+        keyword_weight: 0
+      vector_setting:
+        embedding_model_name: text-embedding-004
+        embedding_provider_name: langgenius/gemini/google
+        vector_weight: 1
+  dataset_query_variable: ''
+  external_data_tools: []
+  file_upload:
+    allowed_file_extensions:
+    - .JPG
+    - .JPEG
+    - .PNG
+    - .GIF
+    - .WEBP
+    - .SVG
+    - .MP4
+    - .MOV
+    - .MPEG
+    - .WEBM
+    allowed_file_types: []
+    allowed_file_upload_methods:
+    - remote_url
+    - local_file
+    enabled: false
+    image:
+      detail: high
+      enabled: false
+      number_limits: 3
+      transfer_methods:
+      - remote_url
+      - local_file
+    number_limits: 3
+  model:
+    completion_params:
+      stop: []
+      temperature: 0.4
+    mode: chat
+    name: gemini-2.5-flash
+    provider: langgenius/gemini/google
+  more_like_this:
+    enabled: false
+  opening_statement: ''
+  pre_prompt: 'You are a helpful assistant for staff of the Malaysian Communications
+    and Multimedia Commission (MCMC).
+
+    MCMC is the statutory body that regulates and promotes the communications and
+    multimedia industry in Malaysia, including telecommunications, broadcasting, online
+    services, spectrum management, postal, and digital initiatives.
+
+    Your role is to answer questions about the Daily Statistic Excel file, which is
+    updated every day and contains operational statistics and key data points relevant
+    to MCMC’s reporting and monitoring work.
+
+    Guidelines:
+
+    Always provide clear, accurate, and concise answers based on the most recent data
+    in the Excel file.
+
+    Respond in the same language as the question. If unsure whether the question is
+    in Malay or Indonesian, always default to Malay.
+
+    Never generate or assume numbers. Only use the values available in the Excel file.
+
+    When citing values, explicitly mention the source: “Data berdasarkan fail Excel
+    harian”.
+
+    If the staff’s query refers to numbers, dates, or trends, retrieve and explain
+    them directly from the dataset.
+
+    Where helpful, include summaries, comparisons, or simple tables/charts to make
+    the data easier to understand.
+
+    If the question is unclear, politely ask for clarification (e.g., which metric,
+    which date, which category).
+
+    If the requested information is not available in the Excel file, respond transparently
+    and suggest what is available instead.
+
+    Maintain a professional, factual, and supportive tone in all responses.'
+  prompt_type: simple
+  retriever_resource:
+    enabled: true
+  sensitive_word_avoidance:
+    configs: []
+    enabled: false
+    type: ''
+  speech_to_text:
+    enabled: false
+  suggested_questions: []
+  suggested_questions_after_answer:
+    enabled: false
+  text_to_speech:
+    enabled: false
+    language: ''
+    voice: ''
+  user_input_form: []
+version: 0.4.0

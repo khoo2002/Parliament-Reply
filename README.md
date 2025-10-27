@@ -1,9 +1,14 @@
 # Parliament Reply Automation using Dify & Gemini
 
 ## Demo Video
+### Demo
+<video controls src="demo.mp4" title="DEMO"></video>
+
+### Chat history
+<video controls src="previous-chat.mp4" title="Previous Chat"></video>
 
 ## Framework
-
+![alt text](<ILSED OS.png>)
 
 ## Overview
 
@@ -50,7 +55,3 @@ The system uses two main groups of sources:
 - Integration with internal databases for real-time data access.
 - Feedback loop for improving model accuracy.
 - Multi-language support for bilingual replies.
-
----
-
-Would you like to include example prompts or outputs in the README as well?
