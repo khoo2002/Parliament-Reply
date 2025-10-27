@@ -2,12 +2,12 @@
 
 ## Demo Video
 ### Demo
-![alt text](<demo.mp4>)
+![demo.mp4](<demo.mp4>)
 <a href="demo.mp4">Click to open demo video</a>
 <video controls src="demo.mp4" title="DEMO"></video>
 
 ### Chat history
-![alt text](<Screenshot 2025-10-27 125322.png>)
+![previous-chat.png](<Screenshot 2025-10-27 125322.png>)
 <a href="previous-chat.mp4">Click to open previous chat video</a>
 <video controls src="previous-chat.mp4" title="Previous Chat"></video>
 
@@ -54,8 +54,6 @@ The system uses two main groups of sources:
 3. A draft reply is generated, complete with citations.
 4. Review and finalize the reply before submission.
 
-## Future Enhancements
-
-- Integration with internal databases for real-time data access.
-- Feedback loop for improving model accuracy.
-- Multi-language support for bilingual replies.
+## Documented Feedback
+![Feedback from ILSED](<Feedback Report On The Parliamentary Chatbot.docx>)s
+![Feedback from CATD](<Testing ILSED Ai Chatbot.docx>)
