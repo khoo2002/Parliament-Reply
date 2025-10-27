@@ -2,9 +2,11 @@
 
 ## Demo Video
 ### Demo
+![alt text](<demo.mp4>)
 <video controls src="demo.mp4" title="DEMO"></video>
 
 ### Chat history
+![alt text](<previous-chat.mp4>)
 <video controls src="previous-chat.mp4" title="Previous Chat"></video>
 
 ## Framework
