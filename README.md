@@ -3,10 +3,12 @@
 ## Demo Video
 ### Demo
 ![alt text](<demo.mp4>)
+<a href="demo.mp4">Click to open demo video</a>
 <video controls src="demo.mp4" title="DEMO"></video>
 
 ### Chat history
-![alt text](<previous-chat.mp4>)
+![alt text](<Screenshot 2025-10-27 125322.png>)
+<a href="previous-chat.mp4">Click to open previous chat video</a>
 <video controls src="previous-chat.mp4" title="Previous Chat"></video>
 
 ## Framework
