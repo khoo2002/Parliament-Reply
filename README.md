@@ -3,12 +3,16 @@
 ## Demo Video
 ### Demo
 ![demo.mp4](<demo.mp4>)
+
 <a href="demo.mp4">Click to open demo video</a>
+
 <video controls src="demo.mp4" title="DEMO"></video>
 
 ### Chat history
 ![previous-chat.png](<Screenshot 2025-10-27 125322.png>)
+
 <a href="previous-chat.mp4">Click to open previous chat video</a>
+
 <video controls src="previous-chat.mp4" title="Previous Chat"></video>
 
 ## Framework
@@ -55,5 +59,6 @@ The system uses two main groups of sources:
 4. Review and finalize the reply before submission.
 
 ## Documented Feedback
-![Feedback from ILSED](<Feedback Report On The Parliamentary Chatbot.docx>)s
+![Feedback from ILSED](<Feedback Report On The Parliamentary Chatbot.docx>)
+
 ![Feedback from CATD](<Testing ILSED Ai Chatbot.docx>)
